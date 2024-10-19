@@ -22,7 +22,4 @@ app.get("/", (c) => {
   return c.text("Hello Hono!");
 });
 
-export default {
-  port: Bun.env.PORT,
-  fetch: app.fetch,
-};
+export default app;
