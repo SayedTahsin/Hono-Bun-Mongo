@@ -17,5 +17,5 @@ open http://localhost:3000
 - [x] noteapi
 - [x] userapi
 - [x] cronjobs
-- [ ] JWT
+- [x] JWT
 - [ ] deploy
