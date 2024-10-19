@@ -1,9 +1,16 @@
-import { Hono } from 'hono'
+import { Hono } from "hono";
+import taskRoutes from "./routers/taskRoutes";
+import mongoConfig from "./config/mongo";
+const app = new Hono();
+mongoConfig();
 
-const app = new Hono()
+app.route("/api/task", taskRoutes);
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
+app.get("/", (c) => {
+  return c.text("Hello Hono!");
+});
 
-export default app
+export default {
+  port: Bun.env.PORT,
+  fetch: app.fetch,
+};
