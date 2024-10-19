@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { scheduleTaskResetCronJobs } from "../controllers/cronTask";
 
 const mongoConfig = async (): Promise<void> => {
   try {
@@ -8,6 +9,7 @@ const mongoConfig = async (): Promise<void> => {
     }
 
     await mongoose.connect(uri);
+    scheduleTaskResetCronJobs();
     console.log("MongoDB connected");
   } catch (error) {
     console.error("MongoDB connection error:", error);
