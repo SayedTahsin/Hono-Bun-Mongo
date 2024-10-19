@@ -18,4 +18,6 @@ open http://localhost:3000
 - [x] userapi
 - [x] cronjobs
 - [x] JWT
-- [ ] deploy
+- [ ] Mongo Data API
+- [ ] remove cron jobs & add schedule trigger
+- [ ] deploy deploy on cloudflare-workers
