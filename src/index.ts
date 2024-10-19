@@ -2,13 +2,16 @@ import { Hono } from "hono";
 import taskRoutes from "./routers/taskRoutes";
 import noteRoutes from "./routers/noteRoutes";
 import userRoutes from "./routers/userRoutes";
+import authRoutes from "./routers/authRoutes";
 import mongoConfig from "./config/mongo";
+
 const app = new Hono();
 mongoConfig();
 
 app.route("/api/tasks", taskRoutes);
 app.route("/api/notes", noteRoutes);
 app.route("/api/users", userRoutes);
+app.route("/auth", authRoutes);
 
 app.get("/", (c) => {
   return c.text("Hello Hono!");
