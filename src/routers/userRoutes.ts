@@ -10,7 +10,7 @@ const userRoutes = new Hono();
 
 userRoutes.post("/", createUser);
 userRoutes.get("/:mail", getUserByMail);
-userRoutes.put("/:mail", updateUser);
-userRoutes.delete("/:mail", deleteUser);
+userRoutes.put("/:id", updateUser);
+userRoutes.delete("/:id", deleteUser);
 
 export default userRoutes;

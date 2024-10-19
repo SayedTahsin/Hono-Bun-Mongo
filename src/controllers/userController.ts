@@ -3,13 +3,11 @@ import User from "../models/User";
 
 export const createUser = async (c: Context) => {
   try {
-    const { name, mail, password, completedTasks, totalTasks } =
-      await c.req.json();
+    const { name, mail, completedTasks, totalTasks } = await c.req.json();
 
     const newUser = new User({
       name,
       mail,
-      password,
       completedTasks,
       totalTasks,
     });
@@ -39,12 +37,12 @@ export const getUserByMail = async (c: Context) => {
 
 export const updateUser = async (c: Context) => {
   try {
-    const { name, password, completedTasks, totalTasks } = await c.req.json();
-    const { mail } = c.req.param();
+    const { name, completedTasks, totalTasks } = await c.req.json();
+    const { id } = c.req.param();
 
     const user = await User.findByIdAndUpdate(
-      mail,
-      { name, password, completedTasks, totalTasks },
+      id,
+      { name, completedTasks, totalTasks },
       { new: true }
     );
 
@@ -60,8 +58,8 @@ export const updateUser = async (c: Context) => {
 
 export const deleteUser = async (c: Context) => {
   try {
-    const { mail } = c.req.param();
-    const user = await User.findByIdAndDelete(mail);
+    const { id } = c.req.param();
+    const user = await User.findByIdAndDelete(id);
     if (user) {
       return c.json({ message: "User deleted successfully" }, 200);
     } else {

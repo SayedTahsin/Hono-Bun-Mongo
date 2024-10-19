@@ -8,7 +8,7 @@ mongoConfig();
 
 app.route("/api/tasks", taskRoutes);
 app.route("/api/notes", noteRoutes);
-app.route("/api/notes", userRoutes);
+app.route("/api/users", userRoutes);
 
 app.get("/", (c) => {
   return c.text("Hello Hono!");
