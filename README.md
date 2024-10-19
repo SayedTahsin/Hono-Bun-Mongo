@@ -12,9 +12,10 @@ bun run dev
 
 open http://localhost:3000
 
-- [ ] Mongoconnect
-- [ ] taskapi
-- [ ] noteapi
-- [ ] userapi
-- [ ] cronjobs
+- [x] Mongoconnect
+- [x] taskapi
+- [x] noteapi
+- [x] userapi
+- [x] cronjobs
+- [ ] JWT
 - [ ] deploy
