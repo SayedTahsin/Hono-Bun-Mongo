@@ -1,23 +1,26 @@
-To install dependencies:
-
-```sh
-bun install
-```
-
 To run:
-
+- clone repo
+```
+$ git clone git@github.com:SayedTahsin/Routine-Backend-Hono.git
+```
+- make .env file
+```
+MONGO_URL=
+JWT_SECRET=
+NODE_ENV=development
+```
 ```sh
+bun i
 bun run dev
 ```
 
 open http://localhost:3000
 
-- [x] Mongoconnect
-- [x] taskapi
-- [x] noteapi
-- [x] userapi
+- [x] Connect Mongo DB
+- [x] Task: Route, Controller
+- [x] Note: Route, Controller
+- [x] User: Route, Controller
 - [x] cronjobs
-- [x] JWT
-- [ ] Mongo Data API
-- [ ] remove cron jobs & add schedule trigger
-- [ ] deploy deploy on cloudflare-workers
+- [x] JWT setup
+- [x] Check Login : Middleware
+- [ ] Make it Clourflare Deploy Friendly in `main` branch
