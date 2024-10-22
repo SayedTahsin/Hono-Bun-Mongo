@@ -1,14 +1,20 @@
 To run:
+
 - clone repo
+
 ```
 $ git clone git@github.com:SayedTahsin/Routine-Backend-Hono.git
 ```
+
 - make .env file
+
 ```
 MONGO_URL=
 JWT_SECRET=
 NODE_ENV=development
+PORT=
 ```
+
 ```sh
 bun i
 bun run dev
