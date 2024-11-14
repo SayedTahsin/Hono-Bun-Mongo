@@ -3,7 +3,7 @@
 Build with Hono.js framework on Bun Runtime Environment. Used MongoDb Database.
 Used node-cron for Task scheduling.
 
- <a href="https://github.com/SayedTahsin/Routine-Hono">Same project build with Hono.js on Cloudflare-Workers Enviromnet & Used D1 Datasbe, FirebaseAuth</a>
+ <a href="https://github.com/SayedTahsin/Routine-Hono">Same project build with Hono.js on Cloudflare-Workers Enviromnet & Used D1 Datasbe</a>
  <br>
  <a href="https://github.com/SayedTahsin/Express-Mongo-Supabase">Same project build with Express.js & used MongoDb and Supabase Database</a>
 
